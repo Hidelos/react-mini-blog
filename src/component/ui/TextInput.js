@@ -1,9 +1,15 @@
 import React from 'react';
+import { func, string } from 'prop-types';
 
-function TextInput(props) {
-  const { value, onChange } = props;
+const TextInput = ({ title, ...props }) => (
+  <textarea className="text-input" {...props}>
+    {title}
+  </textarea>
+);
 
-  return <textarea value={value} onChange={onChange}></textarea>;
-}
+TextInput.propTypes = {
+  onChange: func,
+  title: string.isRequired,
+};
 
 export default TextInput;
