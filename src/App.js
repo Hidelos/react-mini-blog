@@ -9,7 +9,7 @@ import PostViewPage from './component/page/PostViewPage';
 
 const MainTitleText = () => <p className="main-title-text"></p>;
 
-function App(...props) {
+const App = (...props) => {
   return (
     <BrowserRouter>
       <MainTitleText>YBK의 미니 블로그</MainTitleText>
@@ -20,6 +20,6 @@ function App(...props) {
       </Routes>
     </BrowserRouter>
   );
-}
+};
 
 export default App;
