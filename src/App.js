@@ -4,20 +4,21 @@ import './App.css';
 
 //Pages
 import MainPage from './component/page/MainPage';
-//import PostWritePage
+import PostWritePage from './component/page/PostWritePage';
+import PostViewPage from './component/page/PostViewPage';
 
-function App() {
+const MainTitleText = () => <p className="main-title-text"></p>;
+
+function App(...props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <MainTitleText>YBK의 미니 블로그</MainTitleText>
+      <Routes>
+        <Route index element={<MainPage />} />
+        <Route path="post-wrtie" element={<PostWritePage />} />
+        <Route path="post-view" element={<PostViewPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

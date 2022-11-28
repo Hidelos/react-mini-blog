@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import CommentList from '../list/CommentList';
 import TextInput from '../ui/TextInput';
-import Button from '../ui/button';
+import Button from '../ui/Button';
 import data from '../../data.json';
 import { func, string, object } from 'prop-types';
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import TextInput from '../ui/TextInput';
-import Button from '../ui/button';
+import Button from '../ui/Button';
 
 import { func, string } from 'prop-types';
 
